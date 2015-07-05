@@ -4,6 +4,10 @@ Recently I was thinking it would be pretty cool to see what people have been try
 
 My main analytics tool is Google Analytics so I figured the best thing for me would be to capture what was searched for and send that to GA as an event.
 
+Unfortunately there is no way for JavaScript to capture what has been typed into
+the browser's search field. But we can still log that people have been
+searching.
+
 ## Disclaimer
 
 This is still under active development. If weird things happen I can only apologise but there will no doubt be bugs for a while!
