@@ -14,7 +14,8 @@ This is still under active development. If weird things happen I can only apolog
 
 ## Usage
 
-Include the minified script at the bottom of your webpage, assuming you are using the latest Google Analytics tracking codes then your in page searches should start being logged.
+Include the [minified
+script](https://raw.githubusercontent.com/tosbourn/ctrl_f_events/master/ctrl_f_events.min.js) at the bottom of your webpage, assuming you are using the latest Google Analytics tracking codes then your in page searches should start being logged.
 
 You can test this using the events real time view inside of Google Analytics.
 
