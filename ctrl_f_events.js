@@ -24,10 +24,12 @@
     }
 
     if((isReserved==true)&&(ev.which == F)) {
-      if (typeof _trackEvent === 'function') {
+      if (typeof ga === 'function') {
+        ga("send", "event", "Browser Action", "Internal Page Search");
+      } else if(typeof _trackEvent === 'function') {
         _trackEvent("Browser Action", "Internal Page Search");
       } else {
-        console.log("Is Google Analytics correctly set up on this page?");
+        console.warn("Is Google Analytics correctly set up on this page?");
       }
     }
   }
