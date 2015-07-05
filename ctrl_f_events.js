@@ -11,17 +11,23 @@ var modifierKeyPressed = function(keyCode) {
 
 window.onkeyup=function(ev){
   if(modifierKeyPressed(ev.which)){
-    isReserved=false;
+    isReserved = false;
   }
 }
 window.onkeydown=function(ev){
-
   if(modifierKeyPressed(ev.which)) {
-       isReserved=true;
+    isReserved = true;
+    window.setInterval(function(){
+      isReserved = false;
+    }, 1000);
   }
 
   if((isReserved==true)&&(ev.which == F)) {
-    console.log("CTRL+F Hit");
+    if (typeof _trackEvent === 'function') {
+      _trackEvent("Browser Action", "Internal Page Search");
+    } else {
+      console.log("Is Google Analytics correctly set up on this page?");
+    }
   }
 }
 
